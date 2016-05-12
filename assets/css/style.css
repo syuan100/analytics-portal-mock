@@ -1,0 +1,655 @@
+body {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.reset {
+  text-decoration: underline;
+  opacity: 0.3;
+  font-size: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
+.sidebar {
+  margin-top: 100px;
+  border-right: 1px solid #16AAF1;
+}
+
+.sidebar .menu .menu-item {
+    padding: 10px 20px;
+    font-size: 20px;
+    float: right;
+    font-weight: 100;
+}
+
+.sidebar .menu .menu-item.highlight {
+  color: #16AAF1;
+}
+
+.sidebar .menu .menu-item:hover {
+  color: #16AAF1;
+  cursor: pointer;
+}
+
+.content {
+  padding: 50px;
+}
+
+.content .header {
+  padding-bottom: 20px;
+  font-size: 40px;
+  border-bottom: 1px solid gray;
+  width: 90%;
+}
+
+.content .header .header-buttons {
+  font-size: 14px;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+.button {
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  background-color: #888;
+  padding: 10px 0;
+  width: 200px;
+  float: right;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #666;
+}
+
+.button.highlight {
+  background-color: #16AAF1;
+}
+
+.button.highlight:hover {
+  background-color: #1286BD;
+}
+
+.content .main {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.content .scorecard-container .scorecard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
+}
+
+.content .scorecard-container .scorecard:hover {
+  border: 1px solid #16AAF1;
+  cursor: pointer;
+}
+
+.content .scorecard-container .scorecard .scorecard-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.content .scorecard-container .scorecard .scorecard-table .row {
+  margin: 5px 0;
+  text-align: right;
+}
+
+.content .scorecard-container .scorecard .scorecard-table .row .value {
+  position: relative;
+  height: 17px;
+}
+
+.content .scorecard-container .scorecard .scorecard-table .row .value .bar-value {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar-value.mid {
+  width: 100%;
+}
+
+.bar-value.mid {
+  width: 50%;
+}
+
+.bar-value.low {
+  width: 25%;
+}
+
+.bar-value.green {
+  border: 1px solid green;
+}
+
+.bar-value.yellow {
+  border: 1px solid #FFE175;
+}
+
+.bar-value.orange {
+  border: 1px solid orange;
+}
+
+.bar-value.red {
+  border: 1px solid red;
+}
+
+.content .header-buttons .button {
+  margin-right: 3px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.edit-scorecard .section .select-box select {
+  width: 100%;
+  height: 150px;
+}
+
+.edit-scorecard .or-box {
+  position: relative;
+  height: 180px;
+} 
+
+.edit-scorecard .or-box .or, .edit-scorecard .or-box .new-outcome {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.edit-scorecard .or-box .or {
+  padding-left: 5px;
+  font-weight: 600;
+}
+
+.row.row-section {
+  margin-top: 20px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.edit-scorecard .health-bar {
+  width: 100%;
+}
+
+.edit-scorecard .health-bar > div {
+  width: 25%;
+  height: 20px;
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.edit-scorecard .health-bar .edit-box {
+  font-size: 12px;
+}
+
+.edit-scorecard .constraint-value {
+  margin: 3px 0;
+}
+
+.edit-scorecard .header-buttons .button {
+  width: 40%;
+}
+
+.edit-scorecard .constraint-box .health-bar .ideal {
+  background-color: green;
+}
+
+.edit-scorecard .constraint-box .health-bar .nominal {
+  background-color: yellow;
+}
+
+.edit-scorecard .constraint-box .health-bar .warning {
+  background-color: orange;
+}
+
+.edit-scorecard .constraint-box .health-bar .critical {
+  background-color: red;
+}
+
+.edit-scorecard .constraint-box .edit-controls, .edit-scorecard .constraint-box .edit-controls * {
+  display: inline-block;
+  float: right;
+}
+
+.edit-scorecard .constraint-box .edit-controls > * {
+  padding: 0 3px;
+  color: gray;
+}
+
+.edit-scorecard .constraint-box .edit-controls > *:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.edit-scorecard .constraints .edit-constraints .sub-title {
+  margin: 5px 0;
+}
+
+.edit-scorecard .constraints .edit-constraints input[type='text'] {
+  width: 50px;
+  margin: 3px 10px;
+  margin-bottom: 6px;
+}
+
+.edit-scorecard .constraints .constraint-buttons {
+  margin-top: 10px;
+}
+
+.edit-scorecard .constraints .constraint-buttons .button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 3px;
+  float: left;
+  width: auto;
+}
+
+/* EDIT OUTCOME */
+
+.edit-outcome .header-buttons .button {
+  width: 40%;
+}
+
+.edit-outcome {
+  margin-bottom: 100px;
+}
+
+.edit-outcome .stages .add-box {
+      text-align: center;
+    width: 150px;
+    padding: 20px 0;
+    margin-top: 15px;
+    border: 4px dashed #E0E0E0;
+    color: #AFAFAF;
+}
+
+.edit-outcome .stages .add-box:hover {
+  cursor: pointer;
+  border: 4px solid #16AAF1;
+  color: #16AAF1;
+}
+
+.edit-outcome .stages .edit-box {
+    text-align: center;
+    width: 150px;
+    height: 82px;
+    margin-top: 15px;
+    border: 4px solid black;
+    color: black;
+    font-weight: 600;
+}
+
+.edit-outcome .stages .edit-box.last {
+  border: 4px solid #16AAF1;
+  color: #16AAF1;
+}
+
+.edit-outcome .stages .edit-box .name {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        border: 1px solid #C5C5C5;
+        text-align: center;
+}
+
+.edit-outcome .stages .edit-box .name:focus {
+  outline-width: 0;
+}
+
+.edit-outcome .stages .finish-workflow {
+  display: none;
+}
+
+.edit-outcome .stages .finish-workflow .or {
+    display: inline-block;
+    float: left;
+    margin: 30px 15px;
+    font-weight: 600;
+}
+
+.edit-outcome .stages .save-stage-name {
+  font-size: 12px;
+  color: #16AAF1;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  width: 150px;
+}
+
+.edit-outcome .stages .save-stage-name:hover {
+  cursor: pointer;
+}
+
+.edit-outcome .stages .finish-workflow .button.finish {
+  float: left;
+  margin-top: 20px;
+}
+
+.edit-outcome .stage-edits, .edit-outcome .archived-edits {
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    background: white;
+}
+
+.edit-outcome .stage-edits.reediting, .edit-outcome .archived-edits.reediting {
+  z-index: 3;
+}
+
+.edit-outcome .archived-edits.top {
+  z-index: 6;
+}
+
+.edit-outcome .stage-edits .highlight-line, .edit-outcome .archived-edits .highlight-line {
+  height: 82px;
+  border: 1px solid #16AAF1;
+  float: left;
+  width: 0;
+  margin-right: 20px;
+  -webkit-transition: width 1s; /* Safari */
+  transition: width 1s;
+}
+
+
+
+.edit-outcome .stage-edits .data-collector, .edit-outcome .archived-edits .data-collector {
+  display: none;
+  position: absolute;
+  z-index: 6;
+  background: white;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+.edit-outcome .stage-edits .highlight-line .contents, .edit-outcome .archived-edits .highlight-line .contents {
+  display: none;
+  font-weight: 600;
+  width: 230px;
+  text-align: center;
+  position: relative;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+
+.edit-outcome .stage-edits .highlight-line .field-contents, .edit-outcome .archived-edits .highlight-line .field-contents {
+  display: none;
+  color: white;
+  margin: 10px 20px;
+  font-weight: 600;
+}
+
+.highlight-line .field-contents .field-box {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.edit-outcome .stage-edits .highlight-line .add-field-button, .edit-outcome .archived-edits .highlight-line .add-field-button {
+  display: none;
+}
+
+.edit-outcome .stage-edits .highlight-line.expanded, .edit-outcome .archived-edits .highlight-line.expanded {
+  background: #16AAF1;
+  width: 300px;
+}
+
+.edit-outcome .stage-edits .highlight-line.expanded:hover, .edit-outcome .archived-edits .highlight-line.expanded:hover {
+  cursor: pointer;
+  background: #137CAF;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields {
+  border: 2px solid #16AAF1;
+  background: white;
+  color: black;
+  width: 300px;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields .field-contents {
+  color: black;
+  width: 60%;
+  float: left;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields .field-contents .field-box .delete {
+  color: red;
+  text-decoration: underline;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields .field-contents .field-box .delete:hover {
+  cursor: pointer;
+}
+
+.add-field-button {
+  display: none;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields .add-field-button {
+  display: block;
+  float: right;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background: #16AAF1;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
+
+.edit-outcome .archived-edits .highlight-line.has-fields .add-field-button:hover {
+  background: #137CAF;
+  cursor: pointer;
+}
+
+.edit-outcome .stage-edits .type, .edit-outcome .archived-edits .type {
+        text-align: left;
+    margin: 5px 0;
+    padding-left: 10px;
+    background: #16AAF1;
+    color: white;
+    width: 215px;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.edit-outcome .stage-edits .type:hover, .edit-outcome .archived-edits .type:hover {
+  cursor: pointer;
+  background: #137CAF;
+}
+
+.edit-outcome .stage-edits .type.back, .edit-outcome .archived-edits .type.back {
+  background: #ddd;
+  color: black;
+}
+
+.edit-outcome .stage-edits .type.back:hover, .edit-outcome .archived-edits .type.back:hover {
+  background: #ccc;
+  color: black;
+}
+
+.edit-outcome .source-browser .browser .search input {
+  width: 100%;
+}
+
+.edit-outcome .source-browser .browser .back {
+  margin-top: 10px;
+    background: #ddd;
+    padding: 10px;
+}
+
+.edit-outcome .source-browser .browser .back:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.edit-outcome .source-browser .browser select {
+  width: 100%;
+}
+
+.edit-outcome .source-browser .browser .select {
+  margin-top: 10px;
+    background: #16AAF1;
+    padding: 10px;
+  color: white;
+}
+
+.edit-outcome .source-browser .browser .select:hover {
+  background: #1286BD;
+  cursor: pointer;
+}
+
+.edit-outcome .archived-edits .edit {
+  color: #16AAF1;
+  text-decoration: underline;
+}
+
+.edit-outcome .archived-edits .edit:hover {
+  cursor: pointer;
+}
+
+.edit-outcome .finish-adding-stage {
+  display: none;
+  margin-top: 20px;
+  float: left;
+  position: relative;
+  z-index: 4;
+}
+
+.correlate-back, .correlate-forward {
+  float: left;
+  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+  margin-right: 5px;
+}
+
+.edit-outcome .data-collector .button-area {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.edit-outcome .data-collector .button-area .button {
+  width: 50%;
+}
+
+.edit-outcome .preview-area {
+
+}
+
+.edit-outcome .preview-area .name {
+  margin-top: 10px;
+}
+
+.edit-outcome .preview-area .preview-box {
+  font-size: 10px;
+  border: 1px solid lightgray;
+  padding: 2px;
+  margin-top: 2px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.edit-outcome .edit-box[class*=" matched-"] {
+  border: 4px solid #00E400 !important;
+  color: green !important;
+}
+
+.edit-outcome .preview-area .preview-box * {
+  display: none;
+}
+
+.edit-outcome .preview select.logs, .edit-outcome .preview select.logs option {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.edit-outcome .preview select.logs option {
+  border-bottom: 1px solid black;
+}
+
+.edit-outcome .preview select.logs {
+  height: 250px;
+  margin-bottom: 100px;
+}
+
+.log-condition {
+  display: none;
+}
+
+/* BUSINESS OUTCOME PAGE */
+
+.business-outcome .business-outcome-container .business-outcome-card .title {
+  display: inline-block;
+  float: left;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card .edit-tag {
+  color: #16AAF1;
+  text-decoration: underline;
+  padding-left: 10px;
+  display: inline-block;
+  float: left;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card .edit-tag:hover {
+  cursor: pointer;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card .stages-title {
+  clear: both;
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+  margin-right: 10px;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card .stages {
+  float: left;
+}
+
+.business-outcome .business-outcome-container .business-outcome-card .stages .stage {
+  display: inline-block;
+  float: left;
+  width: 130px;
+  text-align: center;
+  margin: 3px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  color: #ccc;
+}

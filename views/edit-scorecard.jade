@@ -1,0 +1,175 @@
+doctype html
+html
+  head
+    title
+      | Edit Scorecard
+    include ./templates/header.jade
+  body
+    .container-fluid.edit-scorecard
+      .row
+        .sidebar.col-md-3
+          .menu
+            .menu-item.highlight
+              | Scorecards
+            .menu-item
+              | Business Outcomes
+            .menu-item
+              | Fields and Mapping
+        .content.col-md-9
+          .row.header
+            .header-title.col-md-7
+              | Edit Scorecard
+            .header-buttons.col-md-5
+              .button.save-scorecard.highlight
+                | Save Scorecard
+              .button.cancel
+                | Cancel
+          .row.naming.row-section
+            .col-md-4.section.name-box
+              .title
+                | Name your scorecard
+              input(class='naming', type='text')
+          .row.main
+            .col-md-4.section.business-outcomes
+              .title
+                | Select Business Outcome To Measure
+              .select-box
+                select(class="business-outcomes" size="15")
+            .col-md-4.or-box
+              .or
+                | or
+              .button.new-outcome.highlight
+                | Define a new outcome
+          .row.constraints.row-section.disabled
+            .col-md-9.section.constraint-box
+              .title
+                | Set Rules:
+              .health-bar
+                .ideal
+                .nominal
+                .warning
+                .critical
+              .health-bar
+                .ideal-box
+                  | Ideal
+                .nominal-box
+                  | Nominal
+                .warning-box
+                  | Warning
+                .critical-box
+                  | Critical
+            .col-md-9.section.edit-constraints
+              .health-bar
+                .ideal-edit.edit-box
+                  .sub-title
+                    | Total Time
+                  select(class='constraint-value')
+                    option(value='less than')
+                      | Less Than
+                    option(value='more than')
+                      | More Than
+                    option(value='equals')
+                      | Equals
+                  br
+                  input(type='text', class='constraint-value')
+                  br
+                  select(class='time')
+                    option(value='ms')
+                      | ms
+                    option(value='s')
+                      | s
+                    option(value='min')
+                      | min
+                    option(value='hr')
+                      | hr
+                    option(value='d')
+                      | d
+                    option(value='wk')
+                      | wk
+                    option(value='mo')
+                      | mo
+                .nominal-edit.edit-box
+                  .sub-title
+                    | Total Time
+                  select(class='constraint-value')
+                    option(value='less than')
+                      | Less Than
+                    option(value='more than')
+                      | More Than
+                    option(value='equals')
+                      | Equals
+                  br
+                  input(type='text', class='constraint-value')
+                  br
+                  select(class='time')
+                    option(value='ms')
+                      | ms
+                    option(value='s')
+                      | s
+                    option(value='min')
+                      | min
+                    option(value='hr')
+                      | hr
+                    option(value='d')
+                      | d
+                    option(value='wk')
+                      | wk
+                    option(value='mo')
+                      | mo
+                .warning-edit.edit-box
+                  .sub-title
+                    | Total Time
+                  select(class='constraint-value')
+                    option(value='less than')
+                      | Less Than
+                    option(value='more than')
+                      | More Than
+                    option(value='equals')
+                      | Equals
+                  br
+                  input(type='text', class='constraint-value')
+                  br
+                  select(class='time')
+                    option(value='ms')
+                      | ms
+                    option(value='s')
+                      | s
+                    option(value='min')
+                      | min
+                    option(value='hr')
+                      | hr
+                    option(value='d')
+                      | d
+                    option(value='wk')
+                      | wk
+                    option(value='mo')
+                      | mo
+                .critical-edit.edit-box
+                  .sub-title
+                    | Total Time
+                  select(class='constraint-value')
+                    option(value='less than')
+                      | Less Than
+                    option(value='more than')
+                      | More Than
+                    option(value='equals')
+                      | Equals
+                  br
+                  input(type='text', class='constraint-value')
+                  br
+                  select(class='time')
+                    option(value='ms')
+                      | ms
+                    option(value='s')
+                      | s
+                    option(value='min')
+                      | min
+                    option(value='hr')
+                      | hr
+                    option(value='d')
+                      | d
+                    option(value='wk')
+                      | wk
+                    option(value='mo')
+                      | mo
+              

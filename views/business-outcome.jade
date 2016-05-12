@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title
+      | Business Score Cards
+    include ./templates/header.jade
+  body.business-outcome
+    .container-fluid
+      .row
+        .sidebar.col-md-3
+          .menu
+            .menu-item
+              | Scorecards
+            .menu-item.highlight
+              | Business Outcomes
+            .menu-item
+              | Fields and Mapping
+        .content.col-md-9
+          .row.header
+            .header-title.col-md-7
+              | Business Outcomes
+            .header-buttons.col-md-5
+              .button.define-scorecard.highlight
+                | Define Business Outcome
+          .row.main
+            .business-outcome-container.col-md-9
+              .business-outcome-card(data-json='{ "type":"business outcome", "bo":"Signup Email to Install", "stages": [ { "name":"Send Email", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/account/signup", "correlation": [ { "name":"Email" } ] }, { "name":"Activate Account", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/account/activate", "correlation": [ { "name":"Email" }, { "name":"UserID" } ] }, { "name":"Download Agent", "origin":"App - aperture-production", "sourcetype":"Logs", "source":"download-log Matching \'process_request\'", "correlation": [ { "name":"UserID" }, { "name":"uuid" } ] }, { "name":"Install Agent", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/api/getlicenseinfo", "correlation": [ { "name":"uuid" } ] } ] }')
+                .title
+                .edit-tag
+                  | Edit
+                .stages-title
+                  | Stages: 
+                .stages
+            .business-outcome-container.col-md-9
+              .business-outcome-card(data-json='{ "type":"business outcome", "bo":"Self Service Ad to Login", "stages":[ { "name":"Landing Page", "origin":"appdynamics.com (production)", "sourcetype":"Browser Request", "source":"www.appdynamics.com/pricing/us", "correlation":[ { "name":"Session ID" } ] }, { "name":"Sign Up", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/account/signup", "correlation":[ { "name":"Session ID" }, { "name":"Username" } ] }, { "name":"Activate Account", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/accounts/activate/", "correlation":[ { "name":"Username" } ] } ] }')
+                .title
+                .edit-tag
+                  | Edit
+                .stages-title
+                  | Stages: 
+                .stages
+            .business-outcome-container.col-md-9
+              .business-outcome-card(data-json='{ "type":"business outcome", "bo":"Cold Call to Purchase", "stages":[ { "name":"Cold Call", "origin":"Salesforce", "sourcetype":"Call", "source":"Salesforce", "correlation":[ { "name":"Company" } ] }, { "name":"Agent Install", "origin":"App - portal-production", "sourcetype":"Business Transactions", "source":"/account/install", "correlation":[ { "name":"Company" }, { "name":"Username" } ] }, { "name":"Billing", "origin":"Salesforce", "sourcetype":"Billing", "source":"Salesforce", "correlation":[ { "name":"Username" } ] } ] }')
+                .title
+                .edit-tag
+                  | Edit
+                .stages-title
+                  | Stages: 
+                .stages

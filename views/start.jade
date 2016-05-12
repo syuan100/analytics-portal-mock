@@ -1,0 +1,110 @@
+doctype html
+html
+  head
+    title
+      | Business Score Cards
+    include ./templates/header.jade
+  body
+    .reset
+      | Reset
+    .container-fluid
+      .row
+        .sidebar.col-md-3
+          .menu
+            .menu-item.highlight
+              | Scorecards
+            .menu-item
+              | Business Outcomes
+            .menu-item
+              | Fields and Mapping
+        .content.col-md-9
+          .row.header
+            .header-title.col-md-7
+              | Scorecards
+            .header-buttons.col-md-5
+              .button.define-scorecard.highlight
+                | Define Scorecard
+          .row.main
+              .scorecard-container.col-md-6
+                .scorecard(data-json='{"title":"Signup Email to Install", "constraints": "Time is less than 1 days|Time is less than 2 days|Time is less than 1 weeks|Time is greater than 2 weeks"}')
+                  .scorecard-title
+                    | Signup Email to Install
+                  .scorecard-table
+                    .row.score
+                      .col-md-3.name
+                        | < 1 Day
+                      .col-md-9.value
+                        .bar-value.mid.green
+                    .row.score
+                      .col-md-3.name
+                        | < 2 Days
+                      .col-md-9.value
+                        .bar-value.high.yellow
+                    .row.score
+                      .col-md-3.name
+                        | < 1 Wk
+                      .col-md-9.value
+                        .bar-value.low.orange
+                    .row.score
+                      .col-md-3.name
+                        | > 2 Wks
+                      .col-md-9.value
+                        .bar-value.low.red
+              .scorecard-container.col-md-6
+                .scorecard(data-json='{"title":"Self Service Ad to Login", "constraints": "Time is less than 1 days|Time is less than 2 days|Time is less than 1 weeks|Time is greater than 2 weeks"}')
+                  .scorecard-title
+                    | Self Service Ad to Login
+                  .scorecard-table
+                    .row.score
+                      .col-md-3.name
+                        | < 1 Day
+                      .col-md-9.value
+                        .bar-value.mid.green
+                    .row.score
+                      .col-md-3.name
+                        | < 2 Days
+                      .col-md-9.value
+                        .bar-value.high.yellow
+                    .row.score
+                      .col-md-3.name
+                        | < 1 Wk
+                      .col-md-9.value
+                        .bar-value.low.orange
+                    .row.score
+                      .col-md-3.name
+                        | > 2 Wks
+                      .col-md-9.value
+                        .bar-value.low.red
+              .scorecard-container.col-md-6
+                .scorecard(data-json='{"title":"Cold Call to Purchase", "constraints": "Time is less than 1 days|Time is less than 2 days|Time is less than 1 weeks|Time is greater than 2 weeks"}')
+                  .scorecard-title
+                    | Cold Call to Purchase
+                  .scorecard-table
+                    .row.score
+                      .col-md-3.name
+                        | < 2 Wks
+                      .col-md-9.value
+                        .bar-value.mid.green
+                    .row.score
+                      .col-md-3.name
+                        | < 1 Mo
+                      .col-md-9.value
+                        .bar-value.high.yellow
+                    .row.score
+                      .col-md-3.name
+                        | < 6 Mo
+                      .col-md-9.value
+                        .bar-value.low.orange
+                    .row.score
+                      .col-md-3.name
+                        | > 6 Mo
+                      .col-md-9.value
+                        .bar-value.low.red
+              .scorecard-container.col-md-6.hidden.cloner
+                .scorecard
+                  .scorecard-title
+                  .scorecard-table
+                    .row.score.hidden
+                      .col-md-3.name
+                      .col-md-9.value
+                        .bar-value

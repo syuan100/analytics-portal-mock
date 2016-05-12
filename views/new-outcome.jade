@@ -1,0 +1,156 @@
+doctype html
+html
+  head
+    title
+      | Edit Scorecard
+    include ./templates/header.jade
+  body
+    .container-fluid.edit-outcome
+      .stage-edits-original.hidden(data-json="")
+        .data-collector
+          .name
+            | Available Data Collectors
+          select.data-collectors(size="5")
+            option(id="username")
+              | Username
+            option(id="sessionid")
+              | Session ID
+            option(id="browser")
+              | Browser
+            option.add-new(val="add")
+              | Add a data collector
+          .preview-area
+            .name
+              | Preview of values:
+            .preview-box
+              .preview(id='username')
+                | syuan, cwilliams, jbriere, mforseth
+              .preview(id='sessionid')
+                | 3n2am52lx, go42kaq23, aie2532k1, wi14k2i0c
+              .preview(id='browser')
+                | Chrome, Chrome, Safari, Chrome, Opera
+          .button-area
+            .button.cancel
+              | Cancel
+            .button.select.highlight
+              | Select
+        .highlight-line
+          .contents
+            | Add correlation field for 
+            span.identifier
+          .field-contents
+            | Correlated by:
+          .add-field-button
+            | +
+            br
+            | Add Field
+        .finished-info
+        .step.select-source(id='1')
+          .title.bold
+            | This stage originates from: 
+          .stage-types.row
+            .col-md-5
+              .type.app
+                | App - portal-production
+              .type.app
+                | App - portal-qa
+              .type.app
+                | App - aperture-production
+              .type.app
+                | App - aperture-qa
+              .type.eum
+                | appdynamics.com (production)
+              .type.third-party
+                | Third-Party Source
+            .col-md-5
+              .type.app
+                | App - portal-staging
+              .type.app
+                | App - portal-dev
+              .type.app
+                | App - aperture-staging
+              .type.app
+                | App - aperture-dev
+              .type.eum
+                | appdynamics.com (pre-production)
+        .step.origin-source.hidden(id='2')
+          .title.bold
+            | Select Source:
+          .origin-source.row
+            .col-md-5
+              .type.app
+                | Business Transactions
+              .type.back
+                | < Back
+            .col-md-5
+              .type.logs
+                | Logs
+        .step.source-browser.hidden(id='3')
+          .title.bold
+            | Select Source Identifier:
+          .browser.row
+            .col-md-8
+              .browser-dialog
+                .title-label
+                select.top.app(size="8")
+                br
+                br
+                .match-title.log-condition
+                  | Match Condition: 
+                input.match-condition.log-condition(type="text")
+                br
+                br
+                .preview.log-condition
+                  | Matched Logs:
+                  br
+                  select.bottom.logs(size=3)
+            .col-md-3
+              .search
+                input(type="text", placeholder="Search")
+              .select
+                | Select
+              .back
+                | < Back
+      .row
+        .sidebar.col-md-3
+          .menu
+            .menu-item
+              | Scorecards
+            .menu-item.highlight
+              | Business Outcomes
+            .menu-item
+              | Fields and Mapping
+        .content.col-md-9
+          .row.header
+            .header-title.col-md-7
+              | Edit Business Outcome
+            .header-buttons.col-md-5
+              .button.save-outcome.highlight
+                | Save Outcome
+              .button.cancel
+                | Cancel
+          .row.main
+            .col-md-4.section.outcome-name
+              .title-label
+                | Business Outcome Name
+              .input
+                input(class="business-outcome-name", type="text")
+          .row.stages.row-section
+            .col-md-3.section
+              .title-label
+                | Add stages to outcome workflow
+              .add-box
+                i.fa.fa-plus
+                br
+                | Click to add a stage
+              .finish-workflow
+                .button.finish
+                  | Continue to Define Stages
+          .finish-adding-stage.backward.button
+            | Back
+          .finish-adding-stage.forward.highlight.button
+            | Continue to Correlation
+          .correlate-back.button.hidden
+            | Back
+          .correlate-forward.button.highlight.hidden
+            | Save Outcome
